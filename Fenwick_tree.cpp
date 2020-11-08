@@ -41,6 +41,15 @@ int getSum(int tree[], int index){
 	return sum;
 }
 
+void update(int tree[], int index, int value) {
+	int curr = index + 1;
+	while(curr <= n) {
+		tree[curr] += arr[index];
+		curr = getNext(curr);
+	}
+}
+
+
 int main() {
 	int t;
 	cin>>t;
