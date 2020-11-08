@@ -1,10 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+ /**
+     * To get next
+     * 1) 2's complement of get minus of index
+     * 2) AND this with index
+     * 3) Add it to index
+*/
 int getNext(int index) {
 	return (index + (index & -index));
 }
 
+/**
+     * To get parent
+     * 1) 2's complement to get minus of index
+     * 2) AND this with index
+     * 3) Subtract that from index
+*/
 int getParent(int index) {
 	return (index - (index & -index));
 }
